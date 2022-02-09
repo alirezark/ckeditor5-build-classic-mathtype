@@ -29,8 +29,9 @@ import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefrom
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
+import Direction from 'ckeditor5-direction';
 
-import Mathtype from '@wiris/mathtype-ckeditor5'
+import Mathtype from '@wiris/mathtype-ckeditor5';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -59,7 +60,8 @@ ClassicEditor.builtinPlugins = [
 	Table,
 	TableToolbar,
 	TextTransformation,
-	Mathtype
+	Mathtype,
+	Direction
 ];
 
 // Editor configuration.
@@ -74,6 +76,8 @@ ClassicEditor.defaultConfig = {
 			'link',
 			'bulletedList',
 			'numberedList',
+			'|',
+			'direction',
 			'|',
 			'indent',
 			'outdent',
